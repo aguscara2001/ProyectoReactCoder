@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Container , Navbar , Nav, NavDropdown  } from 'react-bootstrap'
+import Carrito from './carrito';
 export default function MyNav(){
 
     return(
@@ -23,7 +24,15 @@ export default function MyNav(){
     </Navbar.Collapse>
   </Container>
 </Navbar>
-        </>
-    )
+    
+    <ul>
+      <li>
+        <a><Carrito/></a>
+      </li>
+      <li>
+        <a></a>
+      </li>
+    </ul>
+</>
 
-}
+)}
