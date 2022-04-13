@@ -1,15 +1,23 @@
 import React, {useState} from "react";
 
-export default function ItemCount(onAdd){
+export default function ItemCount(){
 
-    const [counter,setCounter] = useState(1);
+    const [counter,setCounter] = useState(0);
+
+    function aumentar() {
+        setCounter(counter + 1)
+    }
+
+    function disminuir(){
+        setCounter(counter - 1)
+    }
 
     return(
     <>
-        <button>-</button>
-        contador: {counter}
-        <button>+</button>
-        <button onClick={() => onAdd()}>Agregar Al Carrito </button>
+        <h1>Contador</h1>
+        <p>{counter}</p>
+        <button onClick={aumentar}>+</button>
+        <button onClick={disminuir}>-</button>
     </>
     );
 }

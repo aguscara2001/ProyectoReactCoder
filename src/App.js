@@ -1,5 +1,5 @@
 import React from "react";
-import ItemListContainer from "./Components/ItemListContainer";
+import ItemCount from "./Components/ItemCount";
 import MyNav from "./Components/MyNav";
 
 
@@ -8,7 +8,7 @@ export default function App() {
   return (
     <>
     <MyNav />
-    <ItemListContainer />
+    <ItemCount />
     </>
   );
 }
