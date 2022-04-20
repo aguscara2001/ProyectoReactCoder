@@ -1,23 +1,29 @@
 import React, {useState} from "react";
+import { Button } from "react-bootstrap";
 
-export default function ItemCount(){
+export default function ItemCount({stock, inicial}){
 
-    const [counter,setCounter] = useState(0);
+    const [counter,setCounter] = useState(inicial);
 
     function aumentar() {
-        setCounter(counter + 1)
+        if(counter < stock){
+            setCounter(counter + 1)
+        }
     }
 
     function disminuir(){
-        setCounter(counter - 1)
+        if(counter >= 1){
+            setCounter(counter - 1)
+        }
+        
     }
 
     return(
     <>
         <h1>Contador</h1>
-        <p>{counter}</p>
-        <button onClick={aumentar}>+</button>
-        <button onClick={disminuir}>-</button>
+        <h3>{counter}</h3>
+        <Button variant="dark" onClick={aumentar}>+</Button>
+        <Button variant="dark" onClick={disminuir}>-</Button>
     </>
     );
 }
