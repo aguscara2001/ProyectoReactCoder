@@ -1,13 +1,21 @@
 import React from 'react'
 
-export const ItemDetail = ({item}) => {
+const ItemDetail = ({item}) => {
   return (
-    {item.map(item => {
-      <p>{item.nombre}</p>;
-      <p>{item.precio}</p>;
-      <p>{item.imagen}</p>;
-      <p>{item.descripcion}</p>
+    <div>
+      <img src={item.imagen} alt={item.nombre}/>
+      <div>
+        <h2>{item.producto}</h2>
+        <h3>{item.price}</h3>
+        <h4>{item.descripcion}</h4>
+        <h5>{}item.stock</h5>
+      </div>
 
-    }) }
-  )
-}
+
+    </div>
+
+  );
+};
+
+export default ItemDetail
+

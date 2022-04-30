@@ -9,7 +9,7 @@ const Item = ({producto}) => {
                 <img src={producto.imagen} alt={producto.nombre}/>
                 <h4>{producto.nombre}</h4>
                 <p>{producto.precio}</p>
-                <button data-id="{producto.id}" class="agregar-carrito">Agregar al Carrito</button>
+                <button data-id={producto.id} class="agregar-carrito">Agregar al Carrito</button>
             </div> 
         
     </div>
